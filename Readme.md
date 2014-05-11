@@ -1,11 +1,10 @@
-
-# value
+# dom-value
 
   Set form input values
 
-## Installation
+## Install
 
-    $ component install component/value
+    $ npm install dom-value
 
 ## API
 

@@ -3,7 +3,7 @@
  * Module dependencies.
  */
 
-var typeOf = require('type');
+var typeOf = require('component-type');
 
 /**
  * Set or get `el`'s' value.
