@@ -1,11 +1,5 @@
 
 /**
- * Module dependencies.
- */
-
-var typeOf = require('component-type');
-
-/**
  * Set or get `el`'s' value.
  *
  * @param {Element} el
@@ -92,4 +86,25 @@ function type(el) {
   if ('input' == name && type && 'radio' == type.toLowerCase()) return 'radio';
   if ('select' == name) return 'select';
   return name;
+}
+
+function typeOf(val) {
+  switch (Object.prototype.toString.call(val)) {
+    case '[object Date]': return 'date';
+    case '[object RegExp]': return 'regexp';
+    case '[object Arguments]': return 'arguments';
+    case '[object Array]': return 'array';
+    case '[object Error]': return 'error';
+  }
+
+  if (val === null) return 'null';
+  if (val === undefined) return 'undefined';
+  if (val !== val) return 'nan';
+  if (val && val.nodeType === 1) return 'element';
+
+  val = val.valueOf
+    ? val.valueOf()
+    : Object.prototype.valueOf.apply(val)
+
+  return typeof val;
 }

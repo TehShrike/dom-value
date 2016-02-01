@@ -8,8 +8,8 @@
     "url": "git://github.com/npm-dom/dom-value.git"
   },
   "scripts": {
-    "build:test": "browserify test/tests.js -o build/build.js -d",
-    "watch:test": "watchify test/tests.js -o build/build.js -d",
+    "build:test": "browserify -d test/tests.js -o build/build.js",
+    "watch:test": "watchify -d test/tests.js -o build/build.js",
     "test": "npm run build:test && open test/index.html"
   },
   "keywords": [
@@ -23,9 +23,6 @@
     "url": "https://github.com/npm-dom/dom-value/issues"
   },
   "homepage": "https://github.com/npm-dom/dom-value",
-  "dependencies": {
-    "component-type": "^1.0.0"
-  },
   "devDependencies": {
     "browserify": "13.0.0",
     "component-dom": "1.0.8",
