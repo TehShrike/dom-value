@@ -1,6 +1,6 @@
 {
   "name": "dom-value",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Set form input values",
   "main": "index.js",
   "repository": {
